@@ -1,0 +1,487 @@
+* {
+  box-sizing: border-box;
+}
+
+.html {
+  font-size:12px;
+}
+.bodypart1 {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 2024px) {
+  .html {font-size: 10px;}
+  .body {padding: 25px;}
+  .text1andhalfless{font-size: 1.5rem; line-height: 1.5rem;}
+  
+
+}
+  @media only screen and (max-width: 1024px) {
+    .html {font-size: 10px;}
+    .body {padding: 25px;}
+    .text1andhalfless{font-size: 1.5rem; line-height: 1.5rem;}
+
+}
+
+  @media only screen and (max-width: 700px) {
+    .html {font-size: 9px;}
+    .body {padding: 20px;}
+    .text1andhalfless{font-size: 1.6rem; line-height: 1.5rem;}
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  .html {font-size: 9px;}
+  .body {padding: 15px;}
+  .text1andhalfless{font-size: 1.6rem;}
+
+}
+
+@media only screen and (max-width: 500px) {
+  .html {font-size: 9px;}
+  .body {padding: 10px;}
+  .text1andhalfless{font-size: 1.6rem;}
+
+}
+
+@media only screen and (max-width: 400px) {
+  .html {font-size: 7.5px;}
+  .body {padding: 6px;}
+  .text1andhalfless{font-size: 1.8rem;}
+}
+
+
+/* ------------------------------------------------- elements---------------------------------------*/
+.buttonLightt{
+  background: #FFFFFF;
+  border-radius: 10px;
+  font-family: helvetica;
+  font-size: 1.7rem;
+  color: black;
+  font-weight: bolder;
+  padding: 10px 20px ;
+  line-height:2.2rem;
+}
+
+
+.buttonLightt:hover{
+  background: #ECEAEA;
+  border-radius: 10px;
+  font-family: helvetica;
+  font-size: 1.7rem;
+  color: black;
+  font-weight: bolder;
+  padding: 10px 20px ;
+  line-height:2.2rem;
+
+}
+
+.abigonmob{
+  font-family: helvetica;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+
+
+
+
+  .text2andhalf{
+    font-family: helvetica;
+    font-size: 2.5rem;
+  }
+
+  .text1andhalfless{
+    font-family: helvetica;
+  }
+  .text1andhalfmore{
+    font-family: helvetica;
+    font-size: 1.8rem;
+  }
+
+/* ------------------------------------------------- JS for loading transition  -----------------------*/
+
+
+
+.reveal{
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.rotatee{
+  transition: 1s all ease;
+  transform: rotateZ(-10deg) translateY(100px);
+  opacity: 1;
+}
+
+.rotatee.active{
+  transition: 1s all ease;
+  transform: rotateZ(0deg) translateY(0);
+}
+
+.slidee{
+  opacity: 0;
+  transition: 1s all ease;
+  position: relative;
+  transform: translateX(-40px);
+}
+.slidee.active{
+  opacity: 1;
+  transform: translateX(0);
+}
+.scaleCont{
+  margin-left: 4rem;
+  margin-right: 4rem;
+  overflow: hidden;
+  height: 26rem;
+  border-radius: 2rem;
+  width: 70%;
+  padding: 2rem;
+  background: #3C3C3C;  
+  transition: 1s all ease-in-out;
+  max-width: 150rem;
+}
+
+@media (min-width: 700px) {
+
+  .scaleCont.active{height: 760rem;}
+}
+@media (min-width: 100px) {
+
+  .scaleCont.active{height: 1000rem;}
+}
+@media (min-width: 300px) {
+
+  .scaleCont.active{height: 1000rem;}
+}
+@media (min-width: 500px) {
+
+  .scaleCont.active{height: 1100rem;}
+}
+
+@media (min-width: 600px) {
+
+  .scaleCont.active{height: 1150rem;}
+}
+@media (min-width: 640px) {
+  .scaleCont {
+      height: 28rem;
+  }
+  .scaleCont.active{height: 730rem;}
+
+}
+
+@media (min-width: 700px) {
+
+  .scaleCont.active{height: 760rem;}
+}
+
+@media (min-width: 800px) {
+  .scaleCont {
+      height: 30rem;
+  }
+  .scaleCont.active{height: 730rem;}
+}
+
+@media (min-width: 900px) {
+
+  .scaleCont.active{height: 680rem;}
+}
+
+@media (min-width: 1024px) {
+
+  .scaleCont.active{height: 700rem;}
+}
+
+.scaleCont .tempGall{
+  opacity: 1;
+  transition: 0.3s all ease-in-out;
+  max-width: 85rem;
+  width: 100%;
+}
+
+.scaleCont.active{
+  margin: 0rem;
+  border-radius: 0rem;
+  overflow: hidden;
+  background: #000000;  
+  padding: 2rem;
+  width: 100%;
+  max-width: 100%;
+  
+}
+
+.scaleCont.active .tempGall{
+  opacity: 0;
+  max-width:85rem;
+  transform: translateY(5rem);
+}
+
+
+
+.chngbg{
+  transition: 1s all ease-in-out;
+}
+
+
+
+/* ------------------------------------------------- row of the UI ELEMENT -----------------------*/
+
+
+
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  animation: mright;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  max-width: 150rem;
+
+}
+.blobBlur{
+  opacity: 100%;
+  flex: 60%;
+  max-width: 60%;
+  animation: pop;
+  animation-duration: 0.7s;
+  padding: 7.5px;
+}
+@keyframes pop {
+  from   {  opacity: 0%;}
+  to {opacity: 100%;}
+}
+@keyframes mright {
+  0%   {  padding: 0 0px;}
+  100% {padding: 0 20px;}
+}
+
+.blobBlur > div{
+  background-image: url(blobBlur.svg);
+  background-size: 100%;
+  border-radius: 20px;
+  padding: 55px;
+  height: 100%;
+}
+.profileImg{
+  opacity: 0;
+  max-width: 40%;
+  flex: 40%;
+  padding: 7.5px;
+  animation: pop;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+}
+.profileImg img{
+  vertical-align: middle;
+  border-radius: 20px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+
+@media (max-width: 950px) {
+  .blobBlur {
+    flex: 60%;
+    max-width: 60%;
+    border-radius: 10px;
+  }
+  .blobBlur > div{
+    padding: 25px;
+  }
+  .profileImg {
+    display: none;
+    flex: 40%;
+    max-width: 40%;
+    height: 300px;
+
+  }
+  .profileImg img{
+    display: none;
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .abigonmob{
+    font-size: 2rem;
+  }
+}
+@media (max-width: 700px) {
+  .blobBlur {
+    flex: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .blobBlur > div{
+    padding: 25px;
+  }
+  .profileImg {
+    display: none;
+    flex: 100%;
+    max-width: 100%;
+    height: 300px;
+
+  }
+  .profileImg img{
+    display: none;
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .abigonmob{
+    font-size: 2rem;
+  }
+}
+
+
+
+/* ------------------------------------------------- typing animation  -----------------------*/
+
+.blobBlur > div .ani {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  width: 0;
+  animation: typing;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-timing-function: steps(10, end);
+  animation-fill-mode: forwards;
+
+}
+.blobBlur > div .ani2 {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0;
+  width: 0;
+  animation: typing2;
+  animation-duration: 1.7s;
+  animation-delay: 3s;
+  animation-timing-function: steps(20, end);
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  50% { width: 40% ;border-right: 2px solid;}
+  to { width: 40% ;border-right: 0}
+}
+
+
+@keyframes typing2 {
+  from { width: 0 ;border-right: 2px solid;}
+  50% { width: 90% ;border-right: 2px solid;}
+  to {  width: 90%;border-right: 0}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------- Education details and achievements  -----------------------*/
+
+
+.edDetails{
+  opacity: 0%;
+  flex: 50%;
+  max-width: 50%;
+  padding: 7.5px;
+  animation: pop;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.edDetails > div{
+  border-radius: 20px;
+  background: linear-gradient(115.12deg, #6B5CE5 18.66%, #4434CE 83.28%);
+  padding: 55px;
+  height: 100%;
+  line-height:4rem;
+}
+.edDetails > div img{
+  vertical-align: middle;
+  border-radius: 20px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+
+
+
+.edInfo{
+  opacity: 0%;
+  flex: 50%;
+  max-width: 50%;
+  padding: 7.5px;
+  animation: pop;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.edInfo > div.info{
+  opacity: 0%;
+  border-radius: 20px;
+  background: #ECEAEA;
+  padding: 55px;
+  line-height:6rem;
+  animation: pop;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.edInfo > div.ach{
+  border-radius: 20px;
+  background: #ECEAEA;
+  padding: 55px;
+  line-height:6rem;
+}
+
+
+@media (max-width: 700px) {
+  .edDetails {
+    flex: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .edInfo{
+    flex: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .edInfo > div.info, .edInfo >div.ach{
+    padding: 25px;
+  }
+  .edDetails > div{
+    padding: 25px;
+  }
+
+}
+
+
+/* ------------------------------------------------- Education details and achievements  -----------------------*/
